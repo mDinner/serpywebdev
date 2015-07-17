@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My first web page</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1">
+
+</head>
+<body>
+<br /> <br />
+<button id="textChanger">Change first div text</button>
+<br /><br />
+
+<button id="textAppender">Append some text</button>
+<br /><br />
+<div id="secondDiv">Javascript is...</div>
+
+<br /><br />
+<div id="firstDiv">This is some text</div>
+
+<br /><br />
+
+<button id="textCreator">Create text</button>
+
+
+<br /><br />
+
+<div id="thirdDiv"></div>
+
+<script type="text/javascript">
+	
+	document.getElementById("textChanger").onclick=function(){
+		document.getElementById('firstDiv').innerHTML="This is awesome";
+	}
+
+	document.getElementById("textAppender").onclick=function(){
+	document.getElementById('secondDiv').innerHTML=document.getElementById("secondDiv").innerHTML + "great!";
+}
+	document.getElementById("textCreator").onclick=function(){
+	document.getElementById('thirdDiv').innerHTML="<ul><li>Cats</li><li>Dogs</li><li>Fish</li></ul>";
+}
+
+</script>
+
+</body>
+ 

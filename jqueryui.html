@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+ <head>
+ <title>Learning Ajax</title>
+
+ <meta charset="utf-8" />
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+ <script src="jquery-1.11.3.min.js"></script>
+ <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+ <script type="text/javascript" src="http://ajax.googleapis.com/ajax/
+libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+
+ <style>
+#square {
+	width: 200px;
+	height: 200px;
+	background-color: red;
+
+}
+
+#target {
+	width: 200px;
+	height: 200px;
+	background-color: pink;
+
+}
+
+#accordion{
+	width: 700px;
+	margin: 0 auto;
+	float: left;
+	padding: 10px;
+}
+#accordion h3:hover{
+	color: grey;
+}
+
+.menuItem{
+}
+
+ul {
+	clear: both;
+}
+
+ </style>
+
+
+</head
+<body>
+<div id="square"> Drag Me Around!</div>
+<div id="target"> Drag Me Around!</div>
+<div id="accordion">
+	<h3>Section 0</h3>
+	<div class="menuItem">
+		<p>For demo this is just a test, seriously don't panick and don't freak out. This is lame for me as well but someone has to test it.</p>
+	</div>
+	<h3>Section 1</h3>
+	<div class="menuItem">
+		<p>For demo this is just a test, seriously don't panick and don't freak out. This is lame for me as well but someone has to test it.</p>
+	</div>	
+	<h3>Section 2</h3>
+	<div class="menuItem">
+		<p>For demo this is just a test, seriously don't panick and don't freak out. This is lame for me as well but someone has to test it.</p>
+	</div>	
+	<h3>Section 3</h3>
+	<div class="menuItem">
+		<p>For demo this is just a test, seriously don't panick and don't freak out. This is lame for me as well but someone has to test it.</p>
+	</div>
+
+</div>
+
+
+<!-- end of accordion
+ -->
+
+<!-- sortables
+-->
+
+<ul>
+	<li>Cake</li>
+	<li>Ice Cream</li>	
+	<li>Chocolate</li>	
+	<li>Pudding</li>
+</ul>
+
+<script>
+
+
+    $("#square").draggable();
+
+    $("#accordion").accordion();
+
+    $("#target").droppable({
+    	drop:function(ui, event){
+
+    		$("#target").css("background-color", "green");
+
+    	}
+
+    });
+    $('ul').sortable();
+
+
+</script>
+ </body>
+</html>
